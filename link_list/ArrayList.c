@@ -1,60 +1,64 @@
 #include <stdio.h>
 #include "ArrayList.h"
 
-void ListInit(List * plist)
+void ListInit(List *plist)
 {
 	(plist->numOfData) = 0;
 	(plist->curPosition) = -1;
 }
 
-void LInsert(List * plist, LData data)
+void LInsert(List *plist, LData data)
 {
-	if(plist->numOfData > LIST_LEN) 
+	if(plist->numOfData >= LIST_LEN)
 	{
-		puts("ÀúÀåÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù.");
+		puts("ì €ìž¥ì´ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤");
 		return;
 	}
-
 	plist->arr[plist->numOfData] = data;
 	(plist->numOfData)++;
 }
 
-int LFirst(List * plist, LData * pdata)
+int LFirst(List *plist, LData *pdata)
 {
-	if(plist->numOfData == 0)
+	if((plist->numOfData) == 0)
 		return FALSE;
-
 	(plist->curPosition) = 0;
-	*pdata = plist->arr[0];
-	return TRUE;
-}
-
-int LNext(List * plist, LData * pdata)
-{
-	if(plist->curPosition >= (plist->numOfData)-1)
-		return FALSE;
-
-	(plist->curPosition)++;
 	*pdata = plist->arr[plist->curPosition];
 	return TRUE;
 }
 
-LData LRemove(List * plist)
+int LNext(List *plist, LData *pdata)
 {
-	int rpos = plist->curPosition;
-	int num = plist->numOfData;
-	int i;
-	LData rdata = plist->arr[rpos];
+	if((plist->curPosition) >= ((plist->numOfData)-1))
+		return FALSE;
+	(plist->curPosition)++;
+	(*pdata = plist->arr[plist->curPosition]);
+	return TRUE;
+}
 
-	for(i=rpos; i<num-1; i++)
+LData LRemove(List *plist)
+{
+	int		rpos;
+	int		num_data;
+	LData 	rdata;
+	int 	i;
+
+	rpos = plist->curPosition;
+	num_data = plist->numOfData;
+	rdata = plist->arr[rpos];
+
+	i = rpos;
+	while(i < num_data - 1)
+	{
 		plist->arr[i] = plist->arr[i+1];
-
+		i++;
+	}
 	(plist->numOfData)--;
 	(plist->curPosition)--;
 	return rdata;
 }
 
-int LCount(List * plist)
+int LCount(List *plist)
 {
-	return plist->numOfData;
+	return (plist->numOfData);
 }

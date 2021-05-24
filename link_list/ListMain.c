@@ -6,7 +6,7 @@ int main(void)
 	List list;
 	int data;
 	ListInit(&list);
-	
+
 	LInsert(&list, 11);
 	LInsert(&list, 11);
 	LInsert(&list, 22);
@@ -14,18 +14,18 @@ int main(void)
 	LInsert(&list, 22);
 	LInsert(&list, 33);
 	printf("recent number of data: %d\n", LCount(&list));
-	
+
 	if(LFirst(&list, &data))
 	{
 		printf("first data is : %d and flowing ", data);
-		
+
 		while(LNext(&list, &data))
 			{
 				printf("%d ",data);
 			}
 	}
 	printf("\n\n");
-	
+
 	if(LFirst(&list, &data))
 	{
 		if(data == 22)
@@ -45,11 +45,11 @@ int main(void)
 	if(LFirst(&list,&data))
 		{
 			printf("first data is : %d and folowing ",data);
-			
+
 			while(LNext(&list, &data))
 			{
-				printf("%d ", data);		
+				printf("%d ", data);
 			}
 		}
-	return (0);		
+	return (0);
 }

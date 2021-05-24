@@ -4,7 +4,6 @@
 #define TRUE	1
 #define FALSE	0
 
-/*** ArrayList의 정의 ****/
 #define LIST_LEN	100
 typedef int LData;
 
@@ -16,7 +15,6 @@ typedef struct __ArrayList
 } ArrayList;
 
 
-/*** ArrayList와 관련된 연산들 ****/
 typedef ArrayList List;
 
 void ListInit(List * plist);
