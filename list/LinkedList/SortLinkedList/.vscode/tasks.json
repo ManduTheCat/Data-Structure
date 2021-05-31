@@ -14,7 +14,7 @@
                 "-Werror",
                 "-g",
                 "${fileDirname}/*.c",
-                // "${fileDirname}/*.h",
+                "${fileDirname}/*.h",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.out"
             ],
