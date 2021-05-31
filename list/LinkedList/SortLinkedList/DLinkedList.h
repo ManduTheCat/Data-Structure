@@ -21,6 +21,8 @@ typedef struct _LinkedList
 typedef LinkedList List;
 
 void ListInit(List *plist);
+void FInsert(List *plist, Ldata data);
+void SInsert(List *plist, Ldata data);
 void LInsert(List *plist, Ldata data);
 
 int LFirst(List *plist, Ldata *pdata);
