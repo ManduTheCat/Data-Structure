@@ -24,9 +24,15 @@ void FInsert(List *plist, Ldata data)
 void SInsert(List *plist, Ldata data)
 {
 	Node *newNode = (Node*)malloc(sizeof(Node));
-	newNode->data = data;
-	newNode->next = plist->head->next;
-	plist->head->next = newNode;
+	Node *prep;
+
+	prep = plist->head;
+	if((prep->next != NULL) && (plist->comp(data, prep->next->data) == 1))
+	{
+		prep = prep->next;
+	}
+	newNode->next =prep->next;
+	prep->next = newNode;
 	(plist->numOfdata)++;
 }
 
@@ -80,4 +86,9 @@ Ldata LRemove(List *plist)
 int LCount(List *plist)
 {
 	return (plist->numOfdata);
+}
+
+void SetSortRule(List *plist, int(*comp)(Ldata d1, Ldata d2))
+{
+	plist->comp = comp;
 }

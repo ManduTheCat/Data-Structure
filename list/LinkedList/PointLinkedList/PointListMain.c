@@ -3,6 +3,22 @@
 #include "Point.h"
 #include "DLinkedList.h"
 
+int compRule(Ldata d1, Ldata d2)
+{
+	if((d1->xpos) < (d2->xpos))
+	{
+		return 1;
+	}
+	else if(d1->xpos == d2->xpos)
+	{
+		if(d1->ypos < d2->ypos)
+		{
+			return 1;
+		}
+	}
+	return 0;
+}
+
 int main()
 {
 	List list;
