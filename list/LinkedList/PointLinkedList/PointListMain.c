@@ -7,7 +7,7 @@ int compRule(Ldata d1, Ldata d2)
 {
 	if((d1->xpos) < (d2->xpos))
 	{
-		return 1;
+		return 0;
 	}
 	else if(d1->xpos == d2->xpos)
 	{
@@ -16,7 +16,7 @@ int compRule(Ldata d1, Ldata d2)
 			return 1;
 		}
 	}
-	return 0;
+	return 1;
 }
 
 int main()
