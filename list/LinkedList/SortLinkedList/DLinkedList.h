@@ -31,7 +31,7 @@ int LNext(List *plist, Ldata *pdata);
 Ldata LRemove(List *plist);
 int LCount(List *plist);
 
-void SetSortRule(List *list, int(*comp)(Ldata d1, Ldata d2));
+void SetSortRule(List *plist, int(*comp)(Ldata d1, Ldata d2));
 
 
 #endif
