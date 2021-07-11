@@ -16,6 +16,7 @@ typedef struct __list
 {
 	Node *tail;
 	Node *cur;
+	Node *before;
 	int NumberOfdata;
 }CList;
 
