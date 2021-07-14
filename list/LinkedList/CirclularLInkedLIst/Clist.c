@@ -72,7 +72,7 @@ int LNext(CList *plist, Data *pdata)
 Data LRemove(CList*plist)
 {
 	Node *rpos = plist->cur;
-	Data *rdata;
+	Data rdata;
 
 	if(rpos == plist->tail)
 	{
@@ -81,7 +81,7 @@ Data LRemove(CList*plist)
 		else
 			plist->tail = plist->before;
 	}
-	*rdata = plist->cur->data;
+	rdata = plist->cur->data;
 	plist->before->next =  rpos->next;
 	plist->cur  = plist->before;
 
@@ -89,4 +89,9 @@ Data LRemove(CList*plist)
 	(plist->NumberOfdata)--;
 	return  rdata;
 //return *rdata 확인 필요
+}
+
+int LCount(CList *plist)
+{
+	return (plist->NumberOfdata);
 }
