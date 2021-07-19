@@ -13,7 +13,7 @@
 	Node *newNode = (Node*)malloc(sizeof(Node));
 	newNode->data = pdata;
 	newNode->next = plist->head;
-	if(plist->head =! NULL)
+	if(plist->head != NULL)
 	{
 		plist->head->prev = newNode; //간지부분 
 	}
