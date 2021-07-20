@@ -2,7 +2,7 @@
 #define __DB_LINKED_LIST__H_
 
 #define TRUE	1;
-#define FALE	2;
+#define FALE	0;
 
 typedef int Data;
 

@@ -4,7 +4,7 @@
  void ListInit(List *plist)
  {
 	plist->head = NULL;
-	plist->cur =NULL;
+	// plist->cur =NULL;
 	plist->numOfData = 0;
  }
 
@@ -39,7 +39,7 @@
 	{
 		return FALE;
 	} 
-	plist->cur = plist->head->next;
+	plist->cur = plist->cur->next;
 	*pdata = plist->cur->data;
 	return TRUE;
  }
