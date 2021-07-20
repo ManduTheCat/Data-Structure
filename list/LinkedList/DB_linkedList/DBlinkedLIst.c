@@ -46,7 +46,7 @@
 
  int LPrevious(List *plist, Data *pdata)
  {
-	 if(plist->cur->next == NULL)
+	 if(plist->cur->prev == NULL)
 	 {
 		 return FALE;
 	 }

@@ -24,6 +24,7 @@ int main()
 		{
 			printf("%d ",data);
 		}
+		while(LPrevious(&list, &data))
+			printf("%d ",data );
 	}
-
 }
