@@ -5,8 +5,8 @@ typedef int Data;
 
 typedef struct __node__
 {
-	Node *Next;
-	Node *prev;
+	struct __node__ *Next;
+	struct __node__ *prev;
 	Data data;
 }Node;
 
