@@ -4,6 +4,7 @@
 void ListInit(list *plist)
 {
 	plist->nomOfNdoe = 0;
+	plist->cur = NULL;
 	plist->head = (Node*)malloc(sizeof(Node));
 	plist->tail = (Node*)malloc(sizeof(Node));
 	plist->head->Next = plist->tail;
