@@ -1,7 +1,7 @@
 #ifndef __array_stack__
 #define __array_stack__
 
-#define LEN_ARRAY 10
+#define LEN_ARRAY 20
 typedef int DATA;
 
 typedef struct __stack

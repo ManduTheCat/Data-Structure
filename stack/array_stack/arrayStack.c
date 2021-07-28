@@ -16,9 +16,24 @@ int stack_isempty(stack *pstack)
 
 void stack_push(stack *pstack, DATA pdata)
 {
-	DATA temp = pdata;
 	(pstack->stack_top_index)++;
 	pstack->stack_arry[pstack->stack_top_index] = pdata;
 
+}
+
+DATA stack_pop(stack *pstack)
+{
+	DATA temp;
+
+	temp = pstack->stack_arry[pstack->stack_top_index];
+	(pstack->stack_top_index)--;
+	return temp; 
+}
+
+DATA stack_peek(stack *pstack)
+{
+	DATA temp;
+
+	temp = pstack->stack_arry[pstack->stack_top_index];
 	return temp;
 }
