@@ -8,14 +8,13 @@ typedef int Data;
 
 typedef struct _Node
 {
-	_Node *Next;
+	struct _Node *Next;
 	Data data;
 }node;
 
 typedef struct _list
 {
 	node *Head;
-	node *cur;
 	int NumOfData;
 }ListStack;
 
@@ -25,6 +24,6 @@ int stackIsEmty(ListStack *pstack);
 
 Data stackPop(ListStack *pstack);
 Data stackPeck(ListStack *pstack);
-Data stackInsert(ListStack *pstack, Data pdata);
+void stackInsert(ListStack *pstack, Data pdata);
 
 #endif
