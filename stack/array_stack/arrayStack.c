@@ -32,20 +32,6 @@ void stack_push(stack *pstack, DATA pdata)
 	temp = pstack->stack_arry[pstack->stack_top_index];
 	(pstack->stack_top_index)--;
 
-<<<<<<< HEAD
-	return temp;
- }
-
- DATA stack_peek(stack *pstack)
- {
-	 if(stack_isempty(pstack) == 0)
-	 {
-		printf("stack is empty");
-		exit(-1);
-	 }
-	 return (pstack->stack_arry[pstack->stack_top_index]);
- }
-=======
 }
 
 DATA stack_pop(stack *pstack)
@@ -54,7 +40,7 @@ DATA stack_pop(stack *pstack)
 
 	temp = pstack->stack_arry[pstack->stack_top_index];
 	(pstack->stack_top_index)--;
-	return temp; 
+	return temp;
 }
 
 DATA stack_peek(stack *pstack)
@@ -64,4 +50,3 @@ DATA stack_peek(stack *pstack)
 	temp = pstack->stack_arry[pstack->stack_top_index];
 	return temp;
 }
->>>>>>> 5672bc73dfeea95075d09291c2ddea8fa210b0e6
