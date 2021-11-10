@@ -32,6 +32,7 @@ void stack_push(stack *pstack, DATA pdata)
 	temp = pstack->stack_arry[pstack->stack_top_index];
 	(pstack->stack_top_index)--;
 
+<<<<<<< HEAD
 	return temp;
  }
 
@@ -44,3 +45,23 @@ void stack_push(stack *pstack, DATA pdata)
 	 }
 	 return (pstack->stack_arry[pstack->stack_top_index]);
  }
+=======
+}
+
+DATA stack_pop(stack *pstack)
+{
+	DATA temp;
+
+	temp = pstack->stack_arry[pstack->stack_top_index];
+	(pstack->stack_top_index)--;
+	return temp; 
+}
+
+DATA stack_peek(stack *pstack)
+{
+	DATA temp;
+
+	temp = pstack->stack_arry[pstack->stack_top_index];
+	return temp;
+}
+>>>>>>> 5672bc73dfeea95075d09291c2ddea8fa210b0e6
