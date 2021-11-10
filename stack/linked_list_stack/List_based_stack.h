@@ -20,11 +20,11 @@ typedef struct _listStack
 typedef ListStack stack;
 
 void StackInit(stack *pstack);
-void Stack_is_empty(stack *pstack);
+int Stack_is_empty(stack *pstack);
 
-void Stack_push(stack *pstack, Data data);
-void Stack_pop(stack *pstack);
-void Stack_peek(stack *pstack);
+void Stack_push(stack *pstack, Data pdata);
+Data Stack_pop(stack *pstack);
+Data Stack_peek(stack *pstack);
 
 
 #endif

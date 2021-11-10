@@ -9,7 +9,7 @@ void StackInit(stack *pstack)
 
 void  Stack_push(stack *pstack, Data pdata)
 {
-	Node *new_node = (Node*)meloc(sizeof(Node));
+	Node *new_node = (Node*)malloc(sizeof(Node));
 	new_node->data = pdata;
 	new_node->next = pstack->head;
 	pstack->head = new_node;
@@ -27,16 +27,16 @@ Data Stack_pop(stack *pstack)
 	if(pstack->head == NULL)
 	{
 		printf("head pointing NULL");
-		return;
+		exit(-1);
 	}
 	Data rdata = pstack->head->data;
-	int rnode = pstack->head;
+	Node *rnode = pstack->head;
 	pstack->head = pstack->head->next;
 	free(rnode);
 	return rdata;
 }
 
-int Stack_peek(stack *pstack)
+Data Stack_peek(stack *pstack)
 {
 	if(pstack->head == NULL)
 	{
