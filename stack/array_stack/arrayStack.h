@@ -16,6 +16,6 @@ int stack_isempty(stack *pstack);
 
 void stack_push(stack *pstack, DATA pdata);
 DATA stack_pop(stack *pstack);
-DATA stack_peek(stack *pstack)
+DATA stack_peek(stack *pstack);
 
 #endif
